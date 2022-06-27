@@ -6,8 +6,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Login',
-    component: () => import('@/views/Login.vue'),
+    name: 'threejs',
+    component: () => import('@/views/threejs/index'),
     meta: {
       title: '登录界面'
     }
@@ -30,6 +30,14 @@ const routes = [
     component: () => import('@/views/Brand.vue'),
     meta: {
       title: '公司品牌介绍'
+    }
+  },
+  {
+    path: '/threejs',
+    name: 'threejs',
+    component: () => import('@/views/threejs/index'),
+    meta: {
+      title: 'three-demo'
     }
   }
 ]
