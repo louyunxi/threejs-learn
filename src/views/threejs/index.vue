@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <base_1></base_1>
+    <component :is="comName"></component>
   </div>
 </template>
 
@@ -9,11 +9,14 @@ import '@/assets/js/flexible'
 export default {
   name: 'threejs',
   components: {
-    base_1:() => import('./component/base_1.vue')
+    base_1:() => import('./base/base_1.vue'),
+    base_2:() => import('./base/base_2.vue'),
+    base_3:() => import('./base/base_3.vue'),
+    base_4:() => import('./base/base_4.vue'),
   },
   data() {
   	return {
-      
+      comName:'base_4'
   	}
   },
   computed: {
